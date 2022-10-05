@@ -1,5 +1,13 @@
 import React from 'react';
 
-import { Logo } from '~/Logo';
+import { Layout } from '~/Layout';
+import { SignIn } from '~/SignIn';
+import { Theme } from '~/Theme';
 
-export const App = () => <Logo />;
+export const App = () => (
+  <Theme>
+    <Layout>
+      <SignIn />
+    </Layout>
+  </Theme>
+);
