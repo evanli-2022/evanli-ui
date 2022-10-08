@@ -14,7 +14,7 @@ const help: TopActivityProps['help'] = {
 };
 
 export const TopTasks = () => (
-  <TopActivity title='Топ заданий' help={help}>
+  <TopActivity title='Задания' help={help}>
     {(tasks as TaskProps['task'][]).map((task, i) => (
       <Task key={i} task={task} />
     ))}

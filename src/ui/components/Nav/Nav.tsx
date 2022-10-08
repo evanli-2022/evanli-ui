@@ -23,8 +23,8 @@ const navigations: NavLinkProps['nav'][] = [
   },
   {
     icon: <DiversityIcon />,
-    text: 'Краудфандинг',
-    path: routes.main.crowdfunding,
+    text: 'Инициативы',
+    path: routes.main.initiatives,
   },
   {
     icon: <GavelIcon />,

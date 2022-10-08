@@ -2,7 +2,7 @@ export const routes = {
   main: {
     root: '/',
     auctions: 'auctions',
-    crowdfunding: 'crowdfunding',
+    initiatives: 'initiatives',
     market: 'market',
     profile: 'profile',
     tasks: 'tasks',

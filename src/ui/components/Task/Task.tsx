@@ -6,15 +6,21 @@ import CardHeader from '@mui/material/CardHeader';
 import Typography from '@mui/material/Typography';
 import React from 'react';
 
+import { formatNumber } from '~/helpers/formats/number';
 import { Flex } from '~/ui/layouts/Flex';
 
 import { useHandlers } from './Task.handlers';
-import { getPrice, getButtonText } from './Task.helpers';
 
 import type { TaskProps } from './Task.types';
 
+const buttonText = {
+  learning: 'Пройти обучение',
+  profile: 'Перейти в профиль',
+  test: 'Пройти тест',
+};
+
 export const Task = ({ task }: TaskProps) => {
-  const { handleStartTask } = useHandlers();
+  const handlers = useHandlers();
 
   return (
     <Card sx={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
@@ -39,7 +45,7 @@ export const Task = ({ task }: TaskProps) => {
             variant='h4'
             color='text.primary'
             title={task.price.toString()}>
-            $ {getPrice(task.price)}
+            $ {formatNumber(task.price)}
           </Typography>
           <Typography component='p' variant='subtitle1' align='center'>
             {task.description}
@@ -47,8 +53,8 @@ export const Task = ({ task }: TaskProps) => {
         </Flex>
       </CardContent>
       <CardActions>
-        <Button fullWidth variant='contained' onClick={() => handleStartTask(task.type)}>
-          {getButtonText(task.type)}
+        <Button fullWidth variant='contained' onClick={handlers[task.type]}>
+          {buttonText[task.type]}
         </Button>
       </CardActions>
     </Card>
