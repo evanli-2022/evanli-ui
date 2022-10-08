@@ -21,8 +21,12 @@ export const Page = ({ nav, ...props }: PageProps) => {
   return (
     <Main>
       <Appbar onMenuClick={handleToggleMenu} />
-      <Flex sx={{ flex: 1 }}>
-        {nav && <Navbar open={openNavbar}>{nav}</Navbar>}
+      <Flex sx={{ flex: 1, overflow: 'hidden' }}>
+        {nav && (
+          <Navbar open={openNavbar} onClose={handleToggleMenu}>
+            {nav}
+          </Navbar>
+        )}
         <Content {...props} />
       </Flex>
     </Main>
