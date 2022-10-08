@@ -4,7 +4,6 @@ module.exports = {
   },
   rules: {
     indent: ['warn', 2, { SwitchCase: 1 }],
-    'no-console': 'error',
     'no-multi-spaces': 'warn',
   },
 };

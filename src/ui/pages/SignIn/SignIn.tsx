@@ -4,9 +4,7 @@ import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import React from 'react';
 
-import { Logo } from '~/Logo';
-
-export const SignIn = () => {
+export const PageSignIn = () => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -26,7 +24,6 @@ export const SignIn = () => {
         alignItems: 'center',
         gap: 2,
       }}>
-      <Logo width={120} />
       <Typography component='h1' variant='h5'>
         Авторизация
       </Typography>
