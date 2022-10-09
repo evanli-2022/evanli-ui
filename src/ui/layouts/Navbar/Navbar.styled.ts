@@ -1,4 +1,4 @@
-import LibDrawer from '@mui/material/Drawer';
+import Drawer from '@mui/material/Drawer';
 import { styled } from '@mui/material/styles';
 
 import type { Theme, CSSObject } from '@mui/material/styles';
@@ -12,21 +12,17 @@ const drawerOpened = ({ transitions: { create, duration, easing } }: Theme): CSS
 });
 
 const drawerClosed = ({
-  breakpoints,
   spacing,
   transitions: { create, duration, easing },
 }: Theme): CSSObject => ({
-  width: spacing(7),
-  [breakpoints.up('sm')]: {
-    width: spacing(9),
-  },
+  width: spacing(8),
   transition: create('width', {
     easing: easing.sharp,
     duration: duration.leavingScreen,
   }),
 });
 
-export const Drawer = styled(LibDrawer, { shouldForwardProp: prop => prop !== 'open' })(
+export const CustomDrawer = styled(Drawer, { shouldForwardProp: prop => prop !== 'open' })(
   {
     '& .MuiDrawer-paper': {
       position: 'relative',

@@ -8,10 +8,9 @@ export type ContentProps = Pick<ContainerProps, 'children' | 'className' | 'sx'>
 
 export const Content = ({ children, className, sx = {} }: ContentProps) => (
   <Container
-    component='section'
     className={className}
-    maxWidth='xl'
-    sx={[sx, { display: 'flex', flexDirection: 'column' }] as SxProps}>
+    maxWidth='lg'
+    sx={[sx, { display: 'flex', flexDirection: 'column', py: 3, overflow: 'auto' }] as SxProps}>
     {children}
   </Container>
 );

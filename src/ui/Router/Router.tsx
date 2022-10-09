@@ -7,7 +7,7 @@ import { LayoutRoute } from './LayoutRoute';
 import { LazyRoute } from './LazyRoute';
 
 const Auctions = React.lazy(() => import('~/ui/pages/Auctions'));
-const Crowdfunding = React.lazy(() => import('~/ui/pages/Crowdfunding'));
+const Initiatives = React.lazy(() => import('~/ui/pages/Initiatives'));
 const Home = React.lazy(() => import('~/ui/pages/Home'));
 const Market = React.lazy(() => import('~/ui/pages/Market'));
 const Profile = React.lazy(() => import('~/ui/pages/Profile'));
@@ -21,7 +21,7 @@ export const Router = () => (
       <Route path={routes.main.root} element={<LayoutRoute />}>
         <Route index element={<LazyRoute component={Home} />} />
         <Route path={routes.main.auctions} element={<LazyRoute component={Auctions} />} />
-        <Route path={routes.main.crowdfunding} element={<LazyRoute component={Crowdfunding} />} />
+        <Route path={routes.main.initiatives} element={<LazyRoute component={Initiatives} />} />
         <Route path={routes.main.market} element={<LazyRoute component={Market} />} />
         <Route path={routes.main.profile} element={<LazyRoute component={Profile} />} />
         <Route path={routes.main.tasks} element={<LazyRoute component={Tasks} />} />

@@ -1,8 +1,16 @@
-import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Grid';
 import React from 'react';
 
+import { TopInitiatives } from '~/ui/components/TopInitiatives';
+import { TopTasks } from '~/ui/components/TopTasks';
+
 export const PageHome = () => (
-  <Typography component='h1' variant='h2' align='center' color='text.primary' gutterBottom>
-    Home
-  </Typography>
+  <Grid container spacing={5}>
+    <Grid item xs={12} sm={6}>
+      <TopTasks />
+    </Grid>
+    <Grid item xs={12} sm={6}>
+      <TopInitiatives />
+    </Grid>
+  </Grid>
 );

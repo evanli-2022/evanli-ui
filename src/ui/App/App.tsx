@@ -7,8 +7,6 @@ import { Router } from '~/ui/Router';
 import { Theme } from '~/ui/Theme';
 import { Error } from '~/ui/components/Error';
 
-import './index.css';
-
 const store = createStore();
 
 export const App = () => (
