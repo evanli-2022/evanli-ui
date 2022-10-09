@@ -9,3 +9,5 @@ export const routes = {
   },
   signIn: '/sign-in',
 };
+
+export const go = (path: string) => (window.location.pathname = path);

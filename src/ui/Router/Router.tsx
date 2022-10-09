@@ -26,7 +26,7 @@ export const Router = () => (
         <Route path={routes.main.profile} element={<LazyRoute component={Profile} />} />
         <Route path={routes.main.tasks} element={<LazyRoute component={Tasks} />} />
       </Route>
-      <Route path={routes.signIn} element={<LazyRoute component={SignIn} />} />
+      <Route path={routes.signIn} element={<SignIn />} />
     </Routes>
   </BrowserRouter>
 );
